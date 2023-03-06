@@ -1,86 +1,62 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import { Archivo_Black } from '@next/font/google';
+import { Inter } from '@next/font/google';
+import homeHero from 'public/home-hero.png';
+import elysianLogo from 'public/elysian-logo.png';
+import Link from 'next/link';
+
+const archivo = Archivo_Black({
+	subsets: ['latin'],
+	weight: '400',
+});
 
 const Home: NextPage = () => {
-  return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+	return (
+		<>
+			<nav className='absolute w-[600px] top-[50%] -rotate-90 -right-[200px] uppercase z-50'>
+				<ul className='flex w-full h-full text-black justify-between'>
+					<Link href='contact'>Contact</Link>
+					<Link href='services'>Services</Link>
+					<Link href='works'>Works</Link>
+					<Link href='home'>Home</Link>
+				</ul>
+			</nav>
+			<main className={archivo.className}>
+				<section className='flex flex-col h-screen w-screen mx-auto'>
+					<Image src={elysianLogo} alt='' className='absolute z-50 p-8' />
+					<Link
+						href='/contact'
+						className='absolute flex right-24 top-8 p-8 bg-black text-white text-[24px] h-2 w-56 items-center justify-center z-30'
+					>
+						Hire Us
+					</Link>
+					<div className='flex cursor-default'>
+						<p className='text-[150px] m-0 absolute top-[25%] left-[10%] z-[10] uppercase'>
+							Web Design & Development
+						</p>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+						<Image src={homeHero} alt='home' className='z-[20]' />
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
+						<p className='text-[150px] m-0 absolute top-[25%] left-[10%] z-[30] text-outline uppercase'>
+							Web Design & Development
+						</p>
+						<p className='absolute uppercase text-[18px] bottom-[150px] right-[40%] w-[450px] text-justify text-black z-[10]'>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada
+							blandit pretium, sed sit netus quis eros. <br />
+							Lorem gravida mi gravida eu, commodo consectetur.
+						</p>
+						<p className='absolute uppercase text-[18px] bottom-[150px] right-[40%] w-[450px] text-justify text-outline-small z-[30]'>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada
+							blandit pretium, sed sit netus quis eros. <br />
+							Lorem gravida mi gravida eu, commodo consectetur.
+						</p>
+					</div>
+				</section>
+			</main>
+		</>
+	);
+};
 
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and its API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
-    </div>
-  )
-}
-
-export default Home
+export default Home;

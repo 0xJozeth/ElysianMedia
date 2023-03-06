@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-outline {
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-width: 3px;
+	-webkit-text-stroke-color: #ffffff;
+}
+.text-outline-small {
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-width: 0.8px;
+	-webkit-text-stroke-color: #ffffff;
+}
