@@ -8,6 +8,7 @@
   "dependencies": {
     "@formspree/react": "^2.4.1",
     "@next/font": "^13.2.3",
+    "framer-motion": "^10.2.3",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
