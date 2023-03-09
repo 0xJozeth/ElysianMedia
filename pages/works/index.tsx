@@ -55,7 +55,7 @@ export default function Works() {
 						<p>DEV + DESIGN</p>
 					</section>
 					<section className='flex border-r-4 border-black h-[30vw] mx-2'>
-						<p className='flex '>TODO: add a scrolling status bar here</p>
+						<p className='flex '>TODO: add scrolling status bar here</p>
 					</section>
 				</div>
 			</main>
