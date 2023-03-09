@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 .text-outline {
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke-width: 3px;
@@ -15,8 +21,8 @@
 
 .sidebar {
 	position: fixed;
-	width: 6.25vw;
-	z-index: 11;
+	width: 125px;
+	z-index: 9999;
 	height: 100%;
 	right: 0;
 	top: 0;
@@ -24,5 +30,28 @@
 	font-size: 12px;
 	line-height: 13px;
 	padding-top: 12.345679012345679vh;
-	z-index: 100;
+	background-color: white;
+}
+
+.sidebar nav ul li a {
+	display: block;
+	margin: 0 auto;
+	padding: 15px 13px;
+	position: relative;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.responsive-header {
+	font-size: clamp(1rem, 10vw, 9rem);
+}
+
+.responsive-header-small {
+	font-size: clamp(1rem, 10vw, 5rem);
+}
+
+.grainy {
+	background-image: url('/public/grain.jpeg');
+	background-blend-mode: multiply;
+	background-size: cover;
+	background-color: rgba(0, 0, 0, 0.4);
 }
